@@ -10,7 +10,7 @@ import xlsxwriter
 
 if __name__ == "__main__":
     # Create argument parser
-    parser = argparse.ArgumentParser(description="Converts OWASP amass (v3.15.2) json files into other formats.")
+    parser = argparse.ArgumentParser(description="Converts OWASP amass (v3.15.2) json files into CSV or XLSX.")
     # Add arguments
     parser.add_argument('-i', '--json_file', help='Path/Name to the amass JSON file.', required=True)
     parser.add_argument('-o', '--output_file', help='Path/Name of the output file.',  required=True)
