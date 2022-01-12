@@ -2,7 +2,7 @@
 
 **About the script**
 
-A Python script to convert an OWASP Amass (v3.15.2) JSON file into other formats like CSV, XLS or XLSX.
+A Python script to convert an OWASP Amass (v3.15.2) JSON file into CSV or XLSX.
 
 ```
 usage: amass-json-to-excel.py [-h] -i JSON_FILE -o OUTPUT_FILE -f OUTPUT_FORMAT
@@ -16,7 +16,7 @@ options:
   -o OUTPUT_FILE, --output_file OUTPUT_FILE
                         Path/Name of the output file.
   -f OUTPUT_FORMAT, --output_format OUTPUT_FORMAT
-                        Accepts: csv, xls, xlsx
+                        Accepts: csv or xlsx
 
 ```
 
