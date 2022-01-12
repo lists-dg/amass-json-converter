@@ -1,14 +1,37 @@
 # amass-json-converter
 
-A Python script to convert an OWASP Amass JSON file into other formats like CSV, XLS or XLSX.
+**About the script**
 
-The [OWASP Amass Project](https://github.com/OWASP/Amass) performs network mapping of attack surfaces and external asset discovery using open source information gathering and active reconnaissance techniques. Check 
+A Python script to convert an OWASP Amass (v3.15.2) JSON file into other formats like CSV, XLS or XLSX.
 
-Example of an amass JSON output as for 31.10.2021. The structure contains:
+The script takes 3 inputs:
+    '-i' or '--amass_in' : Path to the Amass input JSON file.
+    '-o' or '--file_out' : Path to output CSV file.
+    '-f' or '--format' : Accepts: csv, xls, xlsx, default='xlsx'.
+
+The script will generate one output file in the desired format.
+
+**About OWASP Amass Project**
+
+The [OWASP Amass Project](https://github.com/OWASP/Amass) performs network mapping of attack surfaces and external asset discovery using open source information gathering and active reconnaissance techniques. 
+
+OWASP Amass allows to save the results in json format:
+```
+# amass db -d domain1,domain2 -json file.json
+
+Usage: amass db [options]
+  -d value
+        Domain names separated by commas (can be used multiple times)
+  -json string
+        Path to the JSON output file
+```
+
+**About the Amass JSON files**
+
+Example of an amass JSON output where the structure contains:
+```
 - "lists" -> mylist = ["apple", "banana", "cherry"]
 - "dictionaries" -> thisdict = { "brand": "Ford", "model": "Mustang", "year": 1964}
-
-```
     {
         "events":  
             {
@@ -71,3 +94,5 @@ Example of an amass JSON output as for 31.10.2021. The structure contains:
         ]
     }
 ```
+
+
